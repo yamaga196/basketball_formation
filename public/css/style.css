@@ -1,0 +1,201 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  margin: 0 10%;
+}
+h1,p{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+
+/*
+formation_title
+*/
+.formation_title_start_button{
+  width: 100%;
+  height: 4vh;
+  display: flex;
+}
+.formation_title{
+  line-height: 4vh;
+  width: 100%;
+  margin-right: 20%;
+  text-align: center;
+  border: 1px dotted #000;
+  font-size: 1.5em;
+}
+.start_button{
+  line-height: 4vh;
+  width: 10%;
+  font-size: 1.5em;
+  background-color: #333;
+  color: #fff;
+}
+.start_button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+/*
+main
+*/
+.main{
+  width: 100%;
+  height: 80vh;
+  border: 1px solid #000;
+  margin-top: 20px;
+  position: relative;
+}
+.main_line{
+  border-radius: 0 0 50% 50% /0 0 100% 100%;
+  border: 1px solid #000;
+  border-top: none;
+}
+.line_3pt{
+  width: 90%;
+  margin: 0 5%;
+  height: 70vh;
+}
+.line_freethrowlane{
+  width: 30%;
+  margin: 0 35%;
+  height: 40vh;
+  border: 1px solid #000;
+  border-top: none;
+}
+.line_nocharge{
+  width: 25%;
+  margin: 0 37.5%;
+  height: 5vh;
+}
+.line_freethrow{
+  width: 20%;
+  margin: 0 40%;
+  height: 10vh;
+}
+/*
+basketball
+*/
+.basketball{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 653px;
+  /* bottom: 30px; */
+}
+/*
+player
+*/
+.player{
+  display: inline-block;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.player_pg_1,.player_sg_1,.player_sf_1,.player_pf_1,.player_c_1{
+  background-color: #0000ff;
+}
+.player_pg_2,.player_sg_2,.player_sf_2,.player_pf_2,.player_c_2{
+  background-color: #ff0000;
+}
+#player_pg_1{
+  position: absolute;
+  left: 590px;
+}
+#player_sg_1{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#player_sf_1{
+  position: absolute;
+  left: 150px;
+  bottom: 200px;
+}
+#player_pf_1{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#player_c_1{
+  position: absolute;
+  right: 450px;
+  bottom: 250px;
+}
+#player_pg_2{
+  position: absolute;
+  left: 590px;
+  bottom: 85px;
+}
+#player_sg_2{
+  position: absolute;
+  right: 70px;
+  top: 0;
+}
+#player_sf_2{
+  position: absolute;
+  left: 200px;
+  bottom: 250px;
+}
+#player_pf_2{
+  position: absolute;
+  left: 70px;
+  top: 0;
+}
+#player_c_2{
+  position: absolute;
+  right: 450px;
+  bottom: 320px;
+}
+/*
+thoughts
+*/
+.thoughts{
+  width: 80%;
+  margin: 20px 0 40px 20%;
+  /* margin-bottom: 40px; */
+  height: 30vh;
+  display: flex;
+}
+.thoughts_summary{
+  width: 50%;
+  margin-right: 10%;
+  height: 100%;
+  border: 1px solid #000;
+}
+.thoughts_post{
+  width: 40%;
+}
+.thoughts_form{
+  width: 100%;
+  height: 100%;
+}
+.thoughts_textarea{
+  width: 55%;
+  height: 40%;
+  display: block;
+  font-size: 16px;
+}
+.thoughts_button{
+  display: block;
+  margin-top: 20px;
+  margin-left: 15%;
+  width: 20%;
+  height: 15%;
+  font-size: 1.3em;
+  background-color: #333;
+  color: #fff;
+}
+.thoughts_button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}

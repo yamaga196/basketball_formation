@@ -14,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('articles/welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/formation_list', 'Formation_listController@index')->name('formation_list');
+Route::get('/formation/{id}', 'Formation_listController@show')->name('show');
+
+Route::post('/formation/{id}', 'PostController@store')->name('store');
+
+Route::post('/formation/{id}/like', 'LikeController@like')->name('like');
+Route::post('/formation/{id}/unlike', 'LikeController@unlike')->name('unlike');
