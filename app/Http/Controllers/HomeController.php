@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Like;
+use App\Models\Formation;
+use Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('articles.home');
+        $user = Auth::id();
+        $user_likes = \DB::table('likes')
+                      ->join('formations', 'likes.formation_id', '=', 'formations.id')
+                      ->get();
+        return view('articles.home', compact('user_likes'));
     }
 }

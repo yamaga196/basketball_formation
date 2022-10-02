@@ -23,7 +23,7 @@
         </form>
     @endif
     @endauth
-    <button class="start_button" id="start_button_pickandroll">開始</button>
+    <button class="start_button" id="{{ $formation_data->id }}">開始</button>
     </section>
 
     <!-- main -->
@@ -36,28 +36,49 @@
         </div>
 
         <!-- basketball -->
-        <img class="basketball" id="ball" src="images/basketball.png" alt="バスケットボール">
+        <img class="basketball" id="ball" src="{{ asset('images/basketball.png') }}" alt="バスケットボール" style="left:{{ $formation_data->basketball_left }}px;
+                                      bottom:{{ $formation_data->basketball_bottom }}px;">
 
         <!-- player_1 -->
-        <div class="player player_pg_1" id="player_pg_1">PG</div>
-        <div class="player player_sg_1" id="player_sg_1">SG</div>
-        <div class="player player_sf_1" id="player_sf_1">SF</div>
-        <div class="player player_pf_1" id="player_pf_1">PF</div>
-        <div class="player player_c_1" id="player_c_1">C</div>
+        <div class="player player_pg_1" id="player_pg_1" 
+        style="left:{{ $formation_data->player_pg_1_left }}px;
+               bottom:{{ $formation_data->player_pg_1_bottom }}px;">PG</div>
+        <div class="player player_sg_1" id="player_sg_1" 
+        style="left:{{ $formation_data->player_sg_1_left }}px;
+               bottom:{{ $formation_data->player_sg_1_bottom }}px;">SG</div>
+        <div class="player player_sf_1" id="player_sf_1" 
+        style="left:{{ $formation_data->player_sf_1_left }}px;
+               bottom:{{ $formation_data->player_sf_1_bottom }}px;">SF</div>
+        <div class="player player_pf_1" id="player_pf_1" 
+        style="left:{{ $formation_data->player_pf_1_left }}px;
+               bottom:{{ $formation_data->player_pf_1_bottom }}px;">PF</div>
+        <div class="player player_c_1" id="player_c_1" 
+        style="left:{{ $formation_data->player_c_1_left }}px;
+               bottom:{{ $formation_data->player_c_1_bottom }}px;">C</div>
 
         <!-- player_2 -->
-        <div class="player player_pg_2" id="player_pg_2">PG</div>
-        <div class="player player_sg_2" id="player_sg_2">SG</div>
-        <div class="player player_sf_2" id="player_sf_2">SF</div>
-        <div class="player player_pf_2" id="player_pf_2">PF</div>
-        <div class="player player_c_2" id="player_c_2">C</div>
+        <div class="player player_pg_2" id="player_pg_2" 
+        style="left:{{ $formation_data->player_pg_2_left }}px;
+               bottom:{{ $formation_data->player_pg_2_bottom }}px;">PG</div>
+        <div class="player player_sg_2" id="player_sg_2" 
+        style="left:{{ $formation_data->player_sg_2_left }}px;
+               bottom:{{ $formation_data->player_sg_2_bottom }}px;">SG</div>
+        <div class="player player_sf_2" id="player_sf_2" 
+        style="left:{{ $formation_data->player_sf_2_left }}px;
+               bottom:{{ $formation_data->player_sf_2_bottom }}px;">SF</div>
+        <div class="player player_pf_2" id="player_pf_2" 
+        style="left:{{ $formation_data->player_pf_2_left }}px;
+               bottom:{{ $formation_data->player_pf_2_bottom }}px;">PF</div>
+        <div class="player player_c_2" id="player_c_2" 
+        style="left:{{ $formation_data->player_c_2_left }}px;
+               bottom:{{ $formation_data->player_c_2_bottom }}px;">C</div>
     </section>
 
     <section class="thoughts">
         <div class="thoughts_summary">
-            @foreach($posts as $posts)
-                @if($formation_data->id === $posts->formation_id)
-                    {{ $posts->thoughts }}  ({{ $posts->created_at }})<br />
+            @foreach($posts as $post)
+                @if($formation_data->id === $post->formation_id)
+                    {{ $post->thoughts }}  ({{ $post->created_at }})<br />
                 @endif
             @endforeach
         </div>

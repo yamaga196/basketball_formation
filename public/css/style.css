@@ -85,8 +85,6 @@ basketball
   height: 60px;
   border-radius: 50%;
   position: absolute;
-  left: 653px;
-  /* bottom: 30px; */
 }
 /*
 player
@@ -109,52 +107,33 @@ player
 }
 #player_pg_1{
   position: absolute;
-  left: 590px;
 }
 #player_sg_1{
   position: absolute;
-  right: 0;
-  top: 0;
 }
 #player_sf_1{
   position: absolute;
-  left: 150px;
-  bottom: 200px;
 }
 #player_pf_1{
   position: absolute;
-  left: 0;
-  top: 0;
 }
 #player_c_1{
   position: absolute;
-  right: 450px;
-  bottom: 250px;
 }
 #player_pg_2{
   position: absolute;
-  left: 590px;
-  bottom: 85px;
 }
 #player_sg_2{
   position: absolute;
-  right: 70px;
-  top: 0;
 }
 #player_sf_2{
   position: absolute;
-  left: 200px;
-  bottom: 250px;
 }
 #player_pf_2{
   position: absolute;
-  left: 70px;
-  top: 0;
 }
 #player_c_2{
   position: absolute;
-  right: 450px;
-  bottom: 320px;
 }
 /*
 thoughts
