@@ -11,7 +11,7 @@
         @if($likes->users_id === Auth::id() && $likes->formation_id === $formation_data->id)
             <form action="{{ route('unlike', ['id'=>$formation_data->id]) }}" method="post">
                 @csrf
-                <input type="submit" value="いいね解除">
+                <input type="submit" value="いいね解除" class="like">
             </form>
         @endif
     @else
@@ -19,7 +19,7 @@
             @csrf
             <input type="hidden" name="users_id" value="{{ Auth::id() }}">
             <input type="hidden" name="formation_id" value="{{ $formation_data->id }}">
-            <input type="submit" value="いいね！">
+            <input type="submit" value="いいね！" class="like">
         </form>
     @endif
     @endauth
